@@ -1,0 +1,29 @@
+.eboard_header{
+    height: 500px;
+    background-image: url(../eboard.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    position: relative;
+}
+
+.eboard_header h1{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eboard_members{
+    height: 100vh;
+    background-color: rgba(0, 32, 91, 1);
+    padding-top: 150px;
+}
+
+.eboard_members h1{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
