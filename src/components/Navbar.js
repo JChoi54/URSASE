@@ -9,7 +9,7 @@ function Navbar() {
     const handleClick = () => setClick(!click);
 
     return(
-        <nav className="navbar">
+        <nav className="navbar-container">
             <div className="navbar-logo">
                 <a href="#">
                 <img src="images/sase_logo.png" alt="SASE Logo"/>

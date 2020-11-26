@@ -1,4 +1,4 @@
-.navbar {
+.navbar-container {
     background: transparent;
     height: 80px;
     display: flex;
@@ -42,6 +42,8 @@
 }
 
 .nav-links:hover{
+    text-decoration: none;
+    color: white;
     background-color: black;
     border-radius: 4px;
     transition: all 0.2s ease;
@@ -57,7 +59,7 @@
 
 
 @media screen and (max-width: 960px) {
-    .navbar{
+    .navbar-container{
         position: relative;
         background: rgb(247, 192, 11);
     }
@@ -106,7 +108,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 40%);
         font-size: 30px;
         cursor: pointer;
     }
