@@ -17,7 +17,6 @@
 }
 
 .eboard_members{
-    height: 100vh;
     background-color: rgba(0, 32, 91, 1);
     padding-top: 150px;
 }
@@ -26,4 +25,5 @@
     color: white;
     text-align: center;
     font-size: 35px;
+    margin-bottom: 200px;
 }
