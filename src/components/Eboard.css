@@ -17,7 +17,7 @@
 }
 
 .eboard_members{
-    background-color: rgba(0, 32, 91, 1);
+    background-color: #191a52;
     padding-top: 150px;
 }
 
@@ -25,5 +25,12 @@
     color: white;
     text-align: center;
     font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.eboard_members .eboard-years{
+    color: white;
+    text-align: center;
+    font-size: 25px;
     margin-bottom: 200px;
 }

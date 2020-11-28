@@ -1,0 +1,19 @@
+.events-main{
+    background-color: white;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.events-main h1{
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.events-main h2{
+    color: rgb(129, 129, 129);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+}

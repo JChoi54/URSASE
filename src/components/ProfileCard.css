@@ -19,7 +19,6 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-
 }
 
 .profile-card-img img{
@@ -45,11 +44,11 @@
 }
 
 .profile-card-socials{
-    background-color: rgb(240, 206, 230);
+    background-color: #829CD0;
     height: 70px;
     width: 100%;
     border-radius: 0 0 10px 10px;
-    padding: 20px 40px 0 40px;
+    padding: 25px 40px 0 40px;
     text-align: center;
     position: absolute;
     bottom: 0;
@@ -66,7 +65,7 @@
 
 .profile-card-socials h2{
     font-size: 16px;
-    color: rgb(68, 68, 68);
+    color: white;
     transition: 0.4s ease;
 }
 
@@ -108,4 +107,5 @@
 .profile-card-socials p{
     font-size: 16px;
     margin-top: 25px;
+    color: black;
 }   

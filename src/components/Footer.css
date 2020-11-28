@@ -1,0 +1,95 @@
+.footer-container{
+    background-color: #829CD0;
+    padding: 100px 50px 50px 50px;
+}
+
+.footer-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-connect,
+.footer-join,
+.footer-address{
+    padding: 0 60px 50px 60px;
+}
+
+.footer-connect h1,
+.footer-join h1{
+    font-size: 24px;
+}
+
+.footer-join{
+    text-align: center;
+}
+
+.footer-join h1{
+    margin-bottom: 20px;
+}
+
+.footer-address p{
+    margin-bottom: 10px;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    color: black;
+}
+
+.footer-bottom a{
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover{
+    color: white;
+}
+
+.register-button{
+    border: 1px solid black;
+    width: 100px;
+    margin-top: 10px;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.register-button a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    color: black;
+    background-color: transparent;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.register-button:hover{
+    background-color: #24255e75;
+    border: 1px solid #191a52;
+}
+
+.register-button:hover a{
+    color: white;
+}
+
+.footer-join .fa-facebook-square,
+.footer-join .fa-linkedin,
+.footer-join .fa-instagram,
+.footer-join .fa-link{
+    color: black;
+    margin: 10px;
+    font-size: 32px;
+    transition: 0.2s ease;
+}
+
+.footer-join .fa-facebook-square:hover,
+.footer-join .fa-linkedin:hover,
+.footer-join .fa-instagram:hover,
+.footer-join .fa-link:hover{
+    color: white;
+}

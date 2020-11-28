@@ -16,6 +16,7 @@ function Eboard() {
             <div class="eboard_members">
                 <Container>
                     <h1>Our Current Chapter Leadership</h1>
+                    <h2 className="eboard-years">2019-2020</h2>
                     <Row>
                         <Col>
                             <ProfileCard
@@ -51,7 +52,7 @@ function Eboard() {
                     <Row>
                         <Col>
                             <ProfileCard
-                            src="https://images.unsplash.com/photo-1538883855924-aa6be412f336?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                            src="images/josh.jpg"
                             position="Publicity Chair"
                             name="Joshua Choi"
                             major="Computer Science and DMS"
@@ -64,7 +65,7 @@ function Eboard() {
                         </Col>
                         <Col>
                             <ProfileCard
-                            src="https://images.unsplash.com/photo-1538883855924-aa6be412f336?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                            src="images/desmond.jpg"
                             position="Fundraising Chair"
                             name="Desmond Lai"
                             major="Computer Science"
