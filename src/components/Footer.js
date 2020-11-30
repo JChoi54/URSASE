@@ -1,10 +1,14 @@
 import React from 'react';
 import './Footer.css';
 import '../App.css';
+import TopButton from './TopButton';
 
-function Footer(){
+function Footer(props){
     return(
         <div className="footer-container">
+            
+            <TopButton top={props.id}/>
+
             <div className="footer-main">
                 <div className="footer-connect">
                     <h1>Join SASE UR</h1>

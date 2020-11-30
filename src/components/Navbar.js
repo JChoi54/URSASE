@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import '../App.css';
 import './Navbar.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink, withRouter} from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
 
     const[click, setClick] = useState(false);
 
@@ -11,7 +11,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     return(
-        <nav className="navbar-container">
+        <nav className={props.location.pathname === "/" ? "navbar-container" : "navbar-container colored"}>
             <div className="navbar-logo">
                 <Link to="/" onClick={closeMobileMenu}>
                     <img src="images/sase_logo.png" alt="SASE Logo"/>
@@ -24,24 +24,24 @@ function Navbar() {
 
             <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
-                    <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                    <NavLink exact to="/" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/resume" className="nav-links" onClick={closeMobileMenu}>
+                    <NavLink exact to="/resumes" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
                         Resumes
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+                    <NavLink exact to="/contact" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
                         Contact
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+                    <NavLink exact to="/login" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
                         Login
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
@@ -49,4 +49,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default withRouter(Navbar)

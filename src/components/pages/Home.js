@@ -14,7 +14,7 @@ function Home (){
                 <Pillars />
                 <Eboard />
                 <Events />
-                <Footer />
+                <Footer id="#hero"/>
             </div>
         </div>
     )

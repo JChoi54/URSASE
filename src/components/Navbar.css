@@ -11,6 +11,11 @@
     z-index: 10;
 }
 
+.colored{
+    background: #829CD0;
+    position: relative;
+}
+
 .navbar-logo{
     color: white;
     justify-self: start;
@@ -31,6 +36,7 @@
     width: 75vw;
     justify-content: end;
     margin-right: 2rem;
+    margin-bottom: 0;
 }
 
 .nav-links{
@@ -45,8 +51,14 @@
 .nav-links:hover{
     text-decoration: none;
     color: white;
-    background-color: #191a52;
+    background-color: #191a52be;
     transition: all 0.2s ease;
+}
+
+.nav-links-active{
+    text-decoration: none;
+    color: white;
+    background-color: #191a52be;
 }
 
 .fa-bars{
@@ -94,11 +106,12 @@
         padding: 24px;
         width: 100%;
         display: table;
+        border-radius: 0;
     }
 
     .nav-links:hover{
         color: white;
-        background-color: #191a52;
+        background-color: #191a52be;
         border-radius: 0;
     }
 
