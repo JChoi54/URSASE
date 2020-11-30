@@ -10,7 +10,7 @@ function Footer(){
                     <h1>Join SASE UR</h1>
                     <p>Get involved! Join the SASE UR chapter and open your doors to countless opportunities.</p>
                     <div class="register-button">
-                        <a href="https://ccc.rochester.edu/sase/club_signup">Register</a>
+                        <a href="https://ccc.rochester.edu/sase/club_signup" target="_blank" rel="noreferrer">Register</a>
                     </div>
                 </div>
 
