@@ -13,7 +13,7 @@
 
 .colored{
     background: #829CD0;
-    position: relative;
+    position: absolute;
 }
 
 .navbar-logo{
@@ -44,21 +44,23 @@
     text-decoration: none;
     padding: 8px 10px 8px 10px;
     font-size: 18px;
-    border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 .nav-links:hover{
     text-decoration: none;
-    color: white;
-    background-color: #191a52be;
+    color: black;
     transition: all 0.2s ease;
 }
 
 .nav-links-active{
     text-decoration: none;
-    color: white;
-    background-color: #191a52be;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.colored .nav-links-active{
+    border-bottom: none;
 }
 
 .fa-bars{
@@ -77,7 +79,7 @@
 
 @media screen and (max-width: 960px) {
     .navbar-container{
-        position: relative;
+        position: absolute;
         background: #829CD0;
     }
 
@@ -110,9 +112,12 @@
     }
 
     .nav-links:hover{
-        color: white;
-        background-color: #191a52be;
+        color: black;
         border-radius: 0;
+    }
+
+    .nav-links-active{
+        border-bottom: none;
     }
 
     .navbar-logo{

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../App.css';
-import Footer from '../Footer';
+import SignInSignUp from '../SignInSignUp';
 
 function Login (){
     return(
         <div>
-            <h1>Login</h1>
+            <SignInSignUp />
         </div>
     )
 }
