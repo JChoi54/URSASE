@@ -1,0 +1,78 @@
+.contact-container{
+    width: 100vw;
+    margin-top: 80px;
+    display: flex;
+}
+
+form{
+    overflow: hidden;
+}
+
+.contact-map{
+    height: calc(100vh - 80px);
+    min-height: 640px;
+    width: 45%;
+}
+
+.contact-form{
+    width: 55%;
+    background: white;
+    overflow: hidden;
+}
+
+.contact-form h1{
+    padding: 0 5rem;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+
+.contact-form .input-area,
+.contact-form .send{
+    width: 100%;
+}
+
+.contact-form .form-control{
+    border: none;
+    background: rgb(236, 236, 236);
+    color: black;
+    width: 100%;
+}
+
+.contact-form .input-area input{
+    height: 45px;
+}
+
+.contact-form .input-area input::placeholder {
+    color: rgb(139, 139, 139);
+    opacity: 1;
+}
+
+.contact-form textarea{
+    height: 250px;
+    min-height: 150px;
+    max-height: 400px;
+    resize: vertical;
+}
+
+.contact-form textarea::placeholder{
+    color: rgb(139, 139, 139);
+    opacity: 1;
+}
+
+.contact-form .send input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background: linear-gradient(-90deg,  #173e8b, #191a52);
+    padding: 8px 30px;
+    float: right;
+    margin-top: 25px;
+    transition: .3s ease;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+

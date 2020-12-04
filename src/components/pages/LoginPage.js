@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import SignInSignUp from '../SignInSignUp';
 
-function Login (){
+function LoginPage (){
     return(
         <div>
             <SignInSignUp />
@@ -10,4 +10,4 @@ function Login (){
     )
 }
 
-export default Login
+export default LoginPage

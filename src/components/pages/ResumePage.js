@@ -2,12 +2,13 @@ import React from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 
-function Contact (){
+
+function ResumePage (){
     return(
         <div>
-            <h1>Contact</h1>
+            <h1>Resume</h1>
         </div>
     )
 }
 
-export default Contact
+export default ResumePage

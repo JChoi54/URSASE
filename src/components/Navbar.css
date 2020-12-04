@@ -60,7 +60,12 @@
 }
 
 .colored .nav-links-active{
+    color: #191a52;
     border-bottom: none;
+}
+
+.colored .nav-links:hover{
+    color: #191a52;
 }
 
 .fa-bars{

@@ -6,7 +6,7 @@ import Eboard from '../Eboard';
 import Events from '../Events';
 import Footer from '../Footer';
 
-function Home (){
+function HomePage (){
     return(
         <div>
             <Hero />
@@ -20,4 +20,4 @@ function Home (){
     )
 }
 
-export default Home
+export default HomePage

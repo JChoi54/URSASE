@@ -5,9 +5,12 @@ import TopButton from './TopButton';
 
 function Footer(props){
     return(
+    
         <div className="footer-container">
             
-            <TopButton top={props.id}/>
+            <div className = {props.toparrow === "hide" ? 'hide-arrow' : 'show-arrow'}>
+                <TopButton top={props.id}/> 
+            </div>
 
             <div className="footer-main">
                 <div className="footer-connect">

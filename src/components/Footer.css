@@ -1,6 +1,7 @@
 .footer-container{
     background-color: #829CD0;
     padding: 50px 50px 50px 50px;
+    z-index: 10;
 }
 
 .footer-main{
@@ -92,4 +93,8 @@
 .footer-join .fa-instagram:hover,
 .footer-join .fa-link:hover{
     color: white;
+}
+
+.hide-arrow{
+    display: none;
 }

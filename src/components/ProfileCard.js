@@ -16,13 +16,13 @@ function ProfileCard(props) {
             <div className="profile-card-socials">
                 <h2>More Info</h2>
                 <div className="social-icons">
-                    <a href={props.email} target="_blank">
+                    <a href={props.email} target="_blank" rel="noreferrer">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href={props.linkedin} target="_blank">
+                    <a href={props.linkedin} target="_blank" rel="noreferrer">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href={props.link} target="_blank">
+                    <a href={props.link} target="_blank" rel="noreferrer">
                         <i class="fas fa-link"></i>
                     </a>
                 </div>
