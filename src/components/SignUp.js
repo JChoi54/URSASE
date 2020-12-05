@@ -18,6 +18,10 @@ function SignUp(){
                 <i className="fas fa-lock"></i>
                 <input type="password" placeholder="Password"></input>
             </div>
+            <div className="input-field">
+                <i className="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm Password"></input>
+            </div>
             <input type="submit" value="Sign Up" className="click-button"></input>
         </form>
     )

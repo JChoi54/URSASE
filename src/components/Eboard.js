@@ -16,7 +16,7 @@ function Eboard() {
             <div class="eboard_members">
                 <Container>
                     <h1>Our Current Chapter Leadership</h1>
-                    <h2 className="eboard-years">2019-2020</h2>
+                    <h2 className="eboard-years">2020-2021</h2>
                     <Row>
                         <Col>
                             <ProfileCard

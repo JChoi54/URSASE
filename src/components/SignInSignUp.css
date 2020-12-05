@@ -1,9 +1,10 @@
 .login-container{
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 100%;
     background-color: white;
     overflow: hidden; 
+    margin-top: 80px;
 }
 
 .login-container:before{
@@ -30,7 +31,7 @@
 
 .signin-signup{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 75%;
     transform: translate(-50%, -50%);
     width: 50%;
@@ -117,7 +118,7 @@ form.signup-form{
 }
 
 .option-container{
-    position: absolute;
+
     width: 100%;
     height: 100%;
     top: 0;
@@ -138,7 +139,7 @@ form.signup-form{
 .option .option-content{
     color: white;
     transition: .9s .6s ease-in-out;
-    margin-top: -150px;
+    margin-top: -230px;
 }
 
 .option h3{
@@ -216,7 +217,7 @@ form.signup-form{
 
 @media (max-width: 870px){
     .login-container{
-        height: 100vh;
+        height: calc(100vh - 80px);
     }
 
     .login-container:before{
@@ -233,10 +234,35 @@ form.signup-form{
     .signin-signup{
         width: 100%;
         left: 50%;
-        top: 95%;
+        top: 90%;
         transform: translate(-50%, -100%);
         transition: 1s 0.8s ease-in-out;
     }
+
+    .signin-form h2{
+        font-size: 26px;
+    }
+
+    .input-field{
+        height: 35px;
+    }
+    
+    .input-field i{
+        line-height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .input-field input{
+        font-size: .9rem;
+    }
+
+    .click-button{
+        width: 120px;
+        height: 40px;
+        margin: 10px 0 5px 0;
+        font-weight: 400;
+    }
+    
 
     .option-container{
         grid-template-columns: 1fr;
@@ -271,12 +297,12 @@ form.signup-form{
 
     .left-option{
         grid-row: 1 / 2;
-        margin-top: 230px;
+        margin-top: 185px;
     }
 
     .right-option{
         grid-row: 3 / 4;
-        margin-bottom: -130px;
+        margin-bottom: -180px;
     }
 
     .right-option .option-content{
@@ -288,6 +314,7 @@ form.signup-form{
         bottom: 32%;
         right: initial;
         left: 50%;
+        margin-bottom: 30px;
     }
 
     .login-container.signup-mode .left-option .option-content{
@@ -295,7 +322,7 @@ form.signup-form{
     }
 
     .login-container.signup-mode .signin-signup{
-        top: 60%;
+        top: 55%;
         left: 50%;
         transform: translate(-50% 0);
     }
@@ -316,5 +343,13 @@ form.signup-form{
 
     .login-container.signup-mode:before{
         bottom: 32%;
+    }
+
+    .input-field{
+        height: 30px;
+    }
+    
+    .input-field i{
+        line-height: 30px;
     }
 }
