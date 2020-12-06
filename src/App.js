@@ -5,6 +5,7 @@ import HomePage from './components/pages/HomePage';
 import ResumePage from './components/pages/ResumePage';
 import ContactPage from './components/pages/ContactPage';
 import LoginPage from './components/pages/LoginPage';
+import ProfilePage from './components/pages/ProfilePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/resumes" exact component={ResumePage} />
           <Route path="/contact" exact component={ContactPage} />
           <Route path="/login" exact component={LoginPage} />
+          <Route path="/profile" exact component={ProfilePage} />
         </Switch>
       </div>
     </Router>
