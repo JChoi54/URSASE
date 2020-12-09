@@ -4,6 +4,7 @@ import '../App.css';
 import ProfileInfo from './ProfileInfo';
 import ProfileResume from './ProfileResume';
 import ProfileProjects from './ProfileProjects';
+import {Link} from 'react-router-dom';
 
 function Profile() {
 
@@ -31,7 +32,14 @@ function Profile() {
 
     return(
         <div className="profile-container">
-            <div className="profile-cover"></div>
+            <div className="profile-cover">
+                <div class="edit-profile-button">
+                    <i class="fas fa-cog"></i>
+                    <Link to="/editprofile">
+                        Settings
+                    </Link>
+                </div>
+            </div>
 
             <div className="profile-pic">
                 <div className="profile-pic-top">

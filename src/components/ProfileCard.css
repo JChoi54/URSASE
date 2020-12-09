@@ -88,9 +88,9 @@
     transition-delay: 0.3s;
 }
 
-.fa-linkedin-in,
-.fa-link,
-.fa-envelope{
+.profile-card-socials .fa-linkedin-in,
+.profile-card-socials .fa-link,
+.profile-card-socials .fa-envelope{
     color: black;
     margin-right: 20px;
     margin-left: 20px;
@@ -98,9 +98,9 @@
     transition: 0.2s ease;
 }
 
-.fa-linkedin-in:hover,
-.fa-link:hover,
-.fa-envelope:hover{
+.profile-card-socials .fa-linkedin-in:hover,
+.profile-card-socials .fa-link:hover,
+.profile-card-socials .fa-envelope:hover{
     color: white;
 }
 

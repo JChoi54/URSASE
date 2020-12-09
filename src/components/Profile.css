@@ -1,5 +1,5 @@
 .profile-container{
-    min-height: 200vh;
+    min-height: 150vh;
     background: rgb(233, 233, 233);
 }
 
@@ -12,6 +12,31 @@
     background-position: top center;
     position: relative;
     z-index: 2;
+}
+
+.profile-cover .edit-profile-button{
+    z-index: 4;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 5px;
+    transition: .3s ease;
+    text-align: center;
+    background-color: white;
+    padding: 5px 15px;
+}
+
+.profile-cover .edit-profile-button:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.profile-cover .edit-profile-button a{
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-size: 14px;
+    transition: 0.3s ease;
 }
 
 .profile-pic {
@@ -55,6 +80,7 @@
     object-fit: cover;
     border-radius: 50%;
 } 
+
 
 .profile-pic-middle{
     margin: 30px auto 10px auto;
@@ -137,7 +163,7 @@
 .profile-socials .fa-linkedin,
 .profile-socials .fa-link,
 .profile-socials .fa-instagram,
-.profile-socials .fa-envelope{
+.profile-socials .fa-facebook-square{
     color: black;
     margin-right: 10px;
     margin-left: 10px;
@@ -148,19 +174,27 @@
 .profile-socials .fa-linkedin:hover,
 .profile-socials .fa-link:hover,
 .profile-socials .fa-instagram:hover,
-.profile-socials .fa-envelope:hover{
+.profile-socials .fa-facebook-square:hover{
     color: gray;
 }
 
-.fa-edit{
+.fa-edit,
+.fa-cog{
     color: rgb(196, 196, 196);
     font-size: 18px;
-    margin-left: auto; 
-    margin-right: 0;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
 .fa-edit:hover{
     color: gray;
+}
+
+.fa-cog{
+    color: gray;
+}
+
+.edit-link{
+    margin-left: auto; 
+    margin-right: 0;
 }

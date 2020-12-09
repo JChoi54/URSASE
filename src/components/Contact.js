@@ -9,24 +9,24 @@ function Contact(){
 
             <div className="contact-form">
                 <h1> Contact Us </h1>
-                <form id="contact-form" method="post" action="contactform.php">
-                    <div class="input-area">
+                <form id="contact-form" method="post" action="#">
+                    <div className="input-area">
                         <label for="name"></label>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Name" required />
+                        <input name="name" type="text" className="form-control" id="name" placeholder="Name" required />
                     </div>
 
-                    <div class="input-area">
+                    <div className="input-area">
                         <label for="email"></label>
-                        <input name="email" type="email" class="form-control" id="email" placeholder="Email" required />
+                        <input name="email" type="email" className="form-control" id="email" placeholder="Email" required />
                     </div>
 
-                    <div class="input-area input-message">
+                    <div className="input-area input-message">
                         <label for="message"></label>
-                        <textarea name="message" class="form-control" id="message" placeholder="Your Message" required></textarea>
+                        <textarea name="message" className="form-control" id="message" placeholder="Your Message" required></textarea>
                     </div>
 
-                    <div class="send">
-                        <input type="submit" name="submit" class="submit" value="Submit" />
+                    <div className="send">
+                        <input type="submit" name="submit" className="submit" value="Submit" />
                     </div>
 
                 </form>

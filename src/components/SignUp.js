@@ -8,7 +8,7 @@ function SignUp(){
             <h2>Sign Up</h2>
             <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username"></input>
+                <input type="text" placeholder="Full Name"></input>
             </div>
             <div className="input-field">
                 <i className="fas fa-envelope"></i>

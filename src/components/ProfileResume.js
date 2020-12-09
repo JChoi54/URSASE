@@ -2,6 +2,7 @@ import React from 'react';
 import './Profile.css';
 import '../App.css';
 import ProfileSocials from './ProfileSocials';
+import {Link} from 'react-router-dom';
 
 function ProfileResume(props) {
     return(
@@ -11,7 +12,9 @@ function ProfileResume(props) {
                     <div className="col-8 profile-block">
                         <div className="profile-block-top">
                             <h1>Resume</h1>
-                            <i class="fas fa-edit"></i>
+                            <Link to="/uploadresume" className="edit-link">
+                                <i class="fas fa-edit"></i>
+                            </Link>
                         </div>
                         <div className="divider"></div>
                     </div>

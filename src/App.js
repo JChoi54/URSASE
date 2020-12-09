@@ -6,6 +6,10 @@ import ResumePage from './components/pages/ResumePage';
 import ContactPage from './components/pages/ContactPage';
 import LoginPage from './components/pages/LoginPage';
 import ProfilePage from './components/pages/ProfilePage';
+import EditProfilePage from './components/pages/EditProfilePage';
+import ChangePasswordPage from './components/pages/ChangePasswordPage';
+import UploadResumePage from './components/pages/UploadResumePage';
+import UploadProjectsPage from './components/pages/UploadProjectsPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -18,7 +22,11 @@ function App() {
           <Route path="/resumes" exact component={ResumePage} />
           <Route path="/contact" exact component={ContactPage} />
           <Route path="/login" exact component={LoginPage} />
-          <Route path="/profile" exact component={ProfilePage} />
+          <Route path="/profile" component={ProfilePage} />
+          <Route path="/editprofile" component={EditProfilePage} />
+          <Route path="/changepassword" component={ChangePasswordPage} />
+          <Route path="/uploadresume" component={UploadResumePage} />
+          <Route path="/uploadprojects" component={UploadProjectsPage} />
         </Switch>
       </div>
     </Router>

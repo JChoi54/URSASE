@@ -2,6 +2,7 @@ import React from 'react';
 import './Profile.css';
 import '../App.css';
 import ProfileSocials from './ProfileSocials';
+import {Link} from 'react-router-dom';
 
 function ProfileProjects(props) {
     return(
@@ -11,7 +12,9 @@ function ProfileProjects(props) {
                     <div className="col-8 profile-block">
                         <div className="profile-block-top">
                             <h1>Featured</h1>
-                            <i class="fas fa-edit"></i>
+                            <Link to="/uploadprojects" className="edit-link">
+                                <i class="fas fa-edit"></i>
+                            </Link>
                         </div>
                         <div className="divider"></div>
                     </div>
@@ -28,7 +31,9 @@ function ProfileProjects(props) {
                     <div className="col-8 profile-block">
                         <div className="profile-block-top">
                             <h1>Projects</h1>
-                            <i class="fas fa-edit"></i>
+                            <Link to="/editprofile" className="edit-link">
+                                <i class="fas fa-edit"></i>
+                            </Link>
                         </div>
                         <div className="divider"></div>
                     </div>
