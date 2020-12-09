@@ -34,6 +34,11 @@ function Navbar(props) {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink exact to="/profile" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
+                        Profile
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink exact to="/contact" className="nav-links" activeClassName="nav-links-active" onClick={closeMobileMenu}>
                         Contact
                     </NavLink>
