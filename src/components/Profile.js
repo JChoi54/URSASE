@@ -34,8 +34,8 @@ function Profile() {
         <div className="profile-container">
             <div className="profile-cover">
                 <div class="edit-profile-button">
-                    <i class="fas fa-cog"></i>
                     <Link to="/editprofile">
+                        <i class="fas fa-cog"></i>
                         Settings
                     </Link>
                 </div>

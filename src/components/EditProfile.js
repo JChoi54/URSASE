@@ -6,6 +6,7 @@ import AccountSidebar from './AccountSidebar';
 function EditProfile(){
 
     const addPropic = () => document.getElementById("profile-pic").click();
+    const addCoverpic= () => document.getElementById("cover-pic").click();
 
     const propicText = () => {
         if (document.getElementById("profile-pic").value) {
@@ -13,6 +14,15 @@ function EditProfile(){
             document.getElementById("custom-propic-text").innerHTML = document.getElementById("profile-pic").value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
         } else {
             document.getElementById("custom-propic-text").innerHTML = "No file chosen."
+        }
+    }
+
+    const coverpicText = () => {
+        if (document.getElementById("cover-pic").value) {
+            // eslint-disable-next-line
+            document.getElementById("custom-coverpic-text").innerHTML = document.getElementById("cover-pic").value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        } else {
+            document.getElementById("custom-coverpic-text").innerHTML = "No file chosen."
         }
     }
 
@@ -41,19 +51,38 @@ function EditProfile(){
                                 </div>
                             </div>
 
+                            <div className="upload-coverpic">
+                                <label for="cover-pic">Cover Photo</label>
+                                <div>
+                                    <input type="file" id="cover-pic" onChange={coverpicText} hidden="hidden"/>
+                                    <button type="button" className="upload-button" onClick={addCoverpic}>UPLOAD PHOTO</button>
+                                    <span id="custom-coverpic-text">No file chosen.</span>
+                                </div>
+                            </div>
+
+                            <div className="input-area">
+                                <label for="user-email">Email</label>
+                                <input name="user-email" type="email" className="form-control" id="user-email" required />
+                            </div>
+
                             <div className="input-area">
                                 <label for="graduation-year">Graduation Year</label>
                                 <input name="graduation-year" type="text" className="form-control" id="graduation-year" required />
                             </div>
 
                             <div className="input-area">
-                                <label for="major1">Major(s)</label>
-                                <input name="major1" type="text" className="form-control" id="major1" required />
+                                <label for="major">Major(s)</label>
+                                <input name="major" type="text" className="form-control" id="major" required />
                             </div>
 
                             <div className="input-area">
                                 <label for="minor1">Minor(s)</label>
-                                <input name="minor1" type="text" className="form-control" id="minor1" />
+                                <input name="minor" type="text" className="form-control" id="minor" />
+                            </div>
+
+                            <div className="input-area">
+                                <label for="mainstudy">Main Study</label>
+                                <input name="mainstudy" type="text" className="form-control" id="mainstudy" required/>
                             </div>
 
                             <div className="input-area input-message">

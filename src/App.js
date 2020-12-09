@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import HomePage from './components/pages/HomePage';
-import ResumePage from './components/pages/ResumePage';
+import MembersPage from './components/pages/MembersPage';
 import ContactPage from './components/pages/ContactPage';
 import LoginPage from './components/pages/LoginPage';
 import ProfilePage from './components/pages/ProfilePage';
@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/resumes" exact component={ResumePage} />
+          <Route path="/members" exact component={MembersPage} />
           <Route path="/contact" exact component={ContactPage} />
           <Route path="/login" exact component={LoginPage} />
           <Route path="/profile" component={ProfilePage} />
