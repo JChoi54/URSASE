@@ -16,7 +16,7 @@ function Footer(props){
                 <div className="footer-connect">
                     <h1>Join SASE UR</h1>
                     <p>Get involved! Join the SASE UR chapter and open your doors to countless opportunities.</p>
-                    <div class="register-button">
+                    <div className="register-button">
                         <a href="https://ccc.rochester.edu/sase/club_signup" target="_blank" rel="noreferrer">Register</a>
                     </div>
                 </div>
@@ -24,16 +24,16 @@ function Footer(props){
                 <div className="footer-join">
                     <h1>Connect</h1>
                     <a href="https://www.facebook.com/URSASE/" target="_blank" rel="noreferrer">
-                        <i class="fab fa-facebook-square"></i>
+                        <i className="fab fa-facebook-square"/>
                     </a>
                     <a href="https://www.linkedin.com/company/saseconnect/" target="_blank" rel="noreferrer">
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"/>
                     </a>
                     <a href="https://www.instagram.com/sase_ur/?hl=en" target="_blank" rel="noreferrer">
-                        <i class="fab fa-instagram"></i>
+                        <i className="fab fa-instagram"/>
                     </a>
                     <a href="https://www.saseconnect.org/" target="_blank" rel="noreferrer">
-                        <i class="fas fa-link"></i>
+                        <i className="fas fa-link"/>
                     </a>
                 </div>
 

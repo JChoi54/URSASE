@@ -9,11 +9,11 @@ import ProfileCard from './ProfileCard';
 
 function Eboard() {
     return(
-        <div class="eboard">
-            <div class="eboard_header">
+        <div className="eboard">
+            <div className="eboard_header">
                 <h1>The Executive Board</h1>
             </div>
-            <div class="eboard_members">
+            <div className="eboard_members">
                 <Container>
                     <h1>Our Current Chapter Leadership</h1>
                     <h2 className="eboard-years">2020-2021</h2>

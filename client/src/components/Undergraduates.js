@@ -14,7 +14,7 @@ function Undergraduates(props) {
                 email="jchoi84@u.rochester.edu"
                 major="Computer Science and Digital Media Studies"
                 study="Web Development"
-        
+                link="profile"
             />
             <MemberCard />
             <MemberCard />

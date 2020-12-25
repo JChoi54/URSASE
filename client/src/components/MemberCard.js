@@ -6,7 +6,7 @@ function MemberCard(props){
     return(
         <div className="member-card">
             <div className="member-card-img">
-                <img src={props.src} alt=""></img>
+                <img src={props.src} alt=""/>
             </div>
             <div className="member-card-title">
                 <h1>{props.fullname}</h1>
@@ -18,7 +18,7 @@ function MemberCard(props){
                 <h2>Major: {props.major}</h2>
                 <h2>Minor: {props.minor}</h2>
                 <h2>Main Study: {props.study}</h2>
-                <a href="#">View Profile</a>
+                <a href={props.link}>View Profile</a>
             </div>
         </div>
     )

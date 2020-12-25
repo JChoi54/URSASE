@@ -2,6 +2,11 @@
 
 ## Frontend Tasks
 
+### Warnings
+- Need to start using React.createElement() or JSX as React.createFactory() is depreciated.
+    - Possibly need to find a replacement for the Google Map package as it contains legacy code.
+- Some browser extensions seems to cause site to throw an error "The message port closed before a response was received."
+
 ### Registration
 - Email Verification Page or Notification
 
@@ -11,7 +16,9 @@
 ## Backend Tasks
 
 ### Routes
-- /account route will handle all user authentication and information
+- Backend will be handled through :9000/api
+    - Proxy is setup in package.json (React), and cors package is installed (Backend)
+- /api/account route will handle all user authentication and information
     - / index will send a json containing all database data for user specified.
     - /login subroute will handle login requests
     - /register subroute will handle registration requests

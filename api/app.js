@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes Setup
-app.use('/', indexRouter);
-app.use('/account', accountRouter);
+app.use('/api', indexRouter);
+app.use('/api/account', accountRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));

@@ -16,6 +16,10 @@ class App extends Component {
   componentDidMount() {
     // TODO: Write any code that requires fetching to API here.
     // To call API, use the function fetch(<API URL>).then(res => res.text())
+
+    /*fetch('/api/account/register').then(res => {
+      console.log(res.text())
+    });*/
   }
 
   render() {

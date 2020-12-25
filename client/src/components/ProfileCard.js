@@ -6,7 +6,7 @@ function ProfileCard(props) {
     return(
         <div className="profile-card">
             <div className="profile-card-img">
-                <img src={props.src} alt=""></img>
+                <img src={props.src} alt=""/>
             </div>
             <div className="profile-card-content">
                 <h2>{props.position}</h2>
@@ -17,13 +17,13 @@ function ProfileCard(props) {
                 <h2>More Info</h2>
                 <div className="social-icons">
                     <a href={props.email} target="_blank" rel="noreferrer">
-                        <i class="fas fa-envelope"></i>
+                        <i className="fas fa-envelope"/>
                     </a>
                     <a href={props.linkedin} target="_blank" rel="noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i className="fab fa-linkedin-in"/>
                     </a>
                     <a href={props.link} target="_blank" rel="noreferrer">
-                        <i class="fas fa-link"></i>
+                        <i className="fas fa-link"/>
                     </a>
                 </div>
                 <p>{props.info}</p>
