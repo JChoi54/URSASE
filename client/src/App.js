@@ -13,6 +13,11 @@ import UploadProjectsPage from './components/pages/UploadProjectsPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
+  componentDidMount() {
+    // TODO: Write any code that requires fetching to API here.
+    // To call API, use the function fetch(<API URL>).then(res => res.text())
+  }
+
   render() {
     return (
         <Router>
