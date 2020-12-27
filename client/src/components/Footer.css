@@ -98,3 +98,21 @@
 .hide-arrow{
     display: none;
 }
+
+@media (max-width: 770px){
+    .footer-main{
+        display: block;
+    }
+    .footer-join{
+        text-align: initial;
+    }
+    .footer-join .fa-facebook-square,
+    .footer-join .fa-linkedin,
+    .footer-join .fa-instagram,
+    .footer-join .fa-link{
+        margin: 10px 20px 10px 0;
+    }
+    .footer-container{
+        padding: 100px 50px 100px 50px;
+    }
+}

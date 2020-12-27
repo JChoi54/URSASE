@@ -76,3 +76,22 @@ form{
     margin-bottom: 60px;
 }
 
+@media (max-width: 770px){
+    .contact-container{
+        display: block;
+    }
+    .contact-map{
+        min-height: 400px;
+        height: 400px;
+        width: 100%;
+    }
+    
+    .contact-form{
+        width: 100%;
+    }
+    .contact-form .input-area,
+    .contact-form .send{
+        width: 80%;
+    }
+}
+

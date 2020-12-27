@@ -11,7 +11,8 @@ function ProfileCard(props) {
             <div className="profile-card-content">
                 <h2>{props.position}</h2>
                 <h3>{props.name}</h3>
-                <h3>{props.major} {props.year}</h3>
+                <h3>{props.major}</h3>
+                <h3>{props.year}</h3>
             </div>
             <div className="profile-card-socials">
                 <h2>More Info</h2>

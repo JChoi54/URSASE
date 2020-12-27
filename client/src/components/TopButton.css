@@ -21,3 +21,9 @@
     background-color: #191a52;
 }
 
+
+@media (max-width: 770px){
+    .top-button-container{
+        transform: translateY(-125px);
+    }
+}
