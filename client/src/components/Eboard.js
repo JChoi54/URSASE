@@ -11,7 +11,7 @@ function Eboard() {
     return(
         <div className="eboard">
             <div className="eboard_header">
-                <h1>The Executive Board</h1>
+                <h1>The Executive Board$</h1>
             </div>
             <div className="eboard_members">
                 <Container>
