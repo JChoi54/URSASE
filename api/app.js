@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const db = require('./db/db');
 
 const app = express();
@@ -31,13 +31,26 @@ app.use(bodyParser.urlencoded({extended: true}));
 const bcrypt = require('bcrypt')
 const saltRounds = 10;
 
+// Database Models
+const User = require('./db/models/User')
+
+// Model Initialization
+async function initializeTables() {
+    await db.sequelize.sync({ alter: true })
+}
+
+initializeTables().then(res => {
+    console.log("[Sequelize]: Successfully synced tables. Turn this off in production in order to avoid data loss.")
+})
+
+// Routes
 app.post('/api/signin', async function (req, res) {
     let email = req.body.email
     let password = req.body.password
 
     // STEP 1: Find user by email in database.
     try {
-        db.query("SELECT * FROM users WHERE emailaddress=?", [email], async function (err, results, fields) {
+        db.connection.query("SELECT * FROM users WHERE emailaddress=?", [email], async function (err, results) {
             const user = results[0]
 
             if (user !== undefined) {
@@ -54,8 +67,7 @@ app.post('/api/signin', async function (req, res) {
                         res.send("Password is incorrect.")
                     }
                 });
-            }
-            else {
+            } else {
                 res.send("User does not exist.")
             }
         })
@@ -73,25 +85,39 @@ app.post('/api/signout', function (req, res) {
     // STEP 2:
 })
 
-app.post('/api/signup', function (req, res) {
+app.post('/api/signup', async function (req, res) {
     console.log(req.body);
 
     let email = req.body.email
     let password = req.body.password
 
     // STEP 1: Check if user already exists on the database.
+    try {
+        db.connection.query("SELECT * FROM users WHERE emailaddress=?", [email], async function (err, results) {
+            const user = results[0]
 
-    // STEP 2: If user does not already exists, hash password in bcrypt.
+            if (user === undefined) {
+                // STEP 2: If user does not already exists, hash password in bcrypt.
+                const hash = await bcrypt.hash(password, saltRounds);
 
-    // TODO: Use the user model defined under db/models
+                // TODO: Use the user model defined under db/models
 
-    // STEP 3: Once hash is completed, create the user model and store the new user into the database.
+                // STEP 3: Once hash is completed, create the user model and store the new user into the database.
 
-    // TODO: Add email verification step. Generate email verification token and add it to Step 3.
+                // TODO: Add email verification step. Generate email verification token and add it to Step 3.
 
-    // STEP 4: Send response back to react letting them know to verify their email.
+                // STEP 4: Send response back to react letting them know to verify their email.
 
-    // STEP 4b: Send email to user with verification email letting them know they need to verify.
+                // STEP 4b: Send email to user with verification email letting them know they need to verify.
+
+                res.send("Please verify your email.")
+            } else {
+                res.send("Email already in-use.")
+            }
+        })
+    } catch (e) {
+        console.error("/api/signup: " + e.message)
+    }
 })
 
 app.post('/api/verifyemail', function (req, res) {
