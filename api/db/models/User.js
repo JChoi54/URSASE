@@ -4,9 +4,10 @@ const Sequelize = require("sequelize");
 let User = db.sequelize.define('user', {
     id: {
         type: Sequelize.INTEGER,
+        autoIncrement: true,
         primaryKey: true
     },
-    emailaddress: {
+    email: {
         type: Sequelize.STRING,
         allowNull: false
     },
