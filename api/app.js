@@ -6,6 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const mysql = require('mysql2');
+const {QueryTypes} = require("sequelize");
 const db = require('./db/db');
 
 const app = express();
@@ -34,9 +35,15 @@ const saltRounds = 10;
 // Database Models
 const User = require('./db/models/User')
 
+// Cryptography
+const jwt = require("jsonwebtoken");
+
+// User Configuration (contains application secret)
+const config = require('./config');
+
 // Model Initialization
 async function initializeTables() {
-    await db.sequelize.sync({ force: true })
+    await db.sequelize.sync({alter: true})
 }
 
 initializeTables().then(res => {
@@ -50,29 +57,47 @@ app.post('/api/signin', async function (req, res) {
 
     // STEP 1: Find user by email in database.
     try {
-        db.connection.query("SELECT * FROM users WHERE email=?", [email], async function (err, results) {
-            if (results[0] !== undefined) {
-                const user = results[0]
+        db.sequelize.query("SELECT * FROM users WHERE email=?", {
+            replacements: [email],
+            type: QueryTypes.SELECT,
+            model: User
+        }).then(async function (users) {
+            if (users.length > 0) {
+                const user = users[0]
 
                 // STEP 2: Compare passwords in database with hash.
-                //const hash = await bcrypt.hash(password, saltRounds);
-
-                bcrypt.compare(password, user.password, function (err, result) {
-                    if (err) throw err;
-
+                user.isCorrectPassword(password, function (err, result) {
                     if (result) {
                         // STEP 3: Log the user in.
-                        res.send("Password is correct.")
-                    } else {
-                        res.send("Password is incorrect.")
+                        // TODO: Create option to check off remember me
+                        const token = jwt.sign({email}, config.jwt.secret, {
+                            expiresIn: '1h'
+                        })
+
+                        // STEP 4: Sends generated token to front-end.
+                        res.cookie('token', token, { httpOnly: true }).sendStatus(200);
                     }
-                });
+                    else if (err) {
+                        res.status(500).json({
+                            error: 'Internal Server Error. Please try again.'
+                        })
+                    }
+                    else {
+                        res.status(401).json({
+                            error: 'Incorrect Email or Password.'
+                        })
+                    }
+                })
             } else {
-                res.send("User does not exist.")
+                res.status(401).json({
+                    error: 'Incorrect Email or Password.'
+                })
             }
-        })
+        });
     } catch (e) {
-        console.error("/api/signin: " + e.message)
+        res.status(500).json({
+            error: 'Internal Server Error, please try again.'
+        })
     }
 })
 
@@ -83,6 +108,7 @@ app.post('/api/signout', function (req, res) {
     // STEP 1: Check if user was already signed on through session cookie.
 
     // STEP 2:
+
 })
 
 app.post('/api/signup', async function (req, res) {

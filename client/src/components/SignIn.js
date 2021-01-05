@@ -18,8 +18,10 @@ class SignIn extends Component {
             },
             body: JSON.stringify({email: this.state.email, password: this.state.password})
         });
-        const body = await response.text();
-        this.setState({postResponse: body})
+
+        const json = await response.json()
+
+        this.setState({ postResponse: json.error })
     }
 
     render() {
