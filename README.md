@@ -22,7 +22,8 @@
 - [ ] Unsecured Routes
     - [ ] ~~/ index will send a json containing all database data for user specified.~~
     - [x] /signin subroute will handle login requests through POST
-    - [x] /signout will handle registration requests through POST
+    - [x] /signup will handle registration requests through POST
+    - [ ] /signout will handle sign out requests through POST
     - [ ] /verifyemail subroute will handle email verification through POST
         - This implementation will use codes rather than verifying through GET requests as it is more secure.
 - [ ] Secured Routes (ones that require user authentication)
