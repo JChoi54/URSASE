@@ -16,14 +16,20 @@
 ## Backend Tasks
 
 ### Routes
-- Backend will be handled through :9000/api
-    - Proxy is setup in package.json (React), and cors package is installed (Backend)
-- /api/account route will handle all user authentication and information
-    - / index will send a json containing all database data for user specified.
-    - /login subroute will handle login requests
-    - /register subroute will handle registration requests
-    - /verify subroute will handle email verification
-- TODO
+- [x] Backend will be handled through :9000/api
+    - [x] Proxy is setup in package.json (React), and cors package is installed (Backend)
+        - [ ] Solution for production build can be found here: https://stackoverflow.com/questions/55106295/npm-run-build-does-not-use-proxy
+- [ ] Unsecured Routes
+    - [ ] ~~/ index will send a json containing all database data for user specified.~~
+    - [x] /signin subroute will handle login requests through POST
+    - [x] /signout will handle registration requests through POST
+    - [ ] /verifyemail subroute will handle email verification through POST
+        - This implementation will use codes rather than verifying through GET requests as it is more secure.
+- [ ] Secured Routes (ones that require user authentication)
+    - [ ] /profile/<user_id> will send the information of the user that is queried through GET.
+    - [ ] /profile/update will update information of the logged in user through POST.
+    - [ ] /profile will send information of the logged in user through GET.
+    - [ ] /members will query users through POST and respond back with information.
 
 ### User Model
 - Authentication Information

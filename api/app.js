@@ -162,4 +162,15 @@ app.post('/api/verifyemail', function (req, res) {
 
 })
 
+// Secured Routes with Authentication Required.
+const withAuth = require('./middleware')
+
+app.get('/api/checkToken', withAuth, function (req, res) {
+    res.sendStatus(200);
+})
+
+app.get('/api/profile', withAuth, function (req, res) {
+    // TODO: Send data about the queried user to frontend.
+})
+
 module.exports = app;
