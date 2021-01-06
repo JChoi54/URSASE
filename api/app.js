@@ -75,7 +75,10 @@ app.post('/api/signin', async function (req, res) {
                         })
 
                         // STEP 4: Sends generated token to front-end.
-                        res.cookie('token', token, { httpOnly: true }).sendStatus(200);
+                        res.cookie('token', token, { httpOnly: true })//.sendStatus(200);
+                        res.status(200).json({
+                            error: 'Redirecting...'
+                        })
                     }
                     else if (err) {
                         res.status(500).json({
@@ -99,16 +102,6 @@ app.post('/api/signin', async function (req, res) {
             error: 'Internal Server Error, please try again.'
         })
     }
-})
-
-app.post('/api/signout', function (req, res) {
-    console.log(req.body);
-    res.send("")
-
-    // STEP 1: Check if user was already signed on through session cookie.
-
-    // STEP 2:
-
 })
 
 app.post('/api/signup', async function (req, res) {
@@ -163,13 +156,18 @@ app.post('/api/verifyemail', function (req, res) {
 })
 
 // Secured Routes with Authentication Required.
-const withAuth = require('./middleware')
+const isAuthenticated = require('./middleware')
 
-app.get('/api/checkToken', withAuth, function (req, res) {
+app.get('/api/signout', isAuthenticated, function (req, res) {
+    res.clearCookie("token")
     res.sendStatus(200);
 })
 
-app.get('/api/profile', withAuth, function (req, res) {
+app.get('/api/checkToken', isAuthenticated, function (req, res) {
+    res.sendStatus(200);
+})
+
+app.get('/api/profile', isAuthenticated, function (req, res) {
     // TODO: Send data about the queried user to frontend.
 })
 

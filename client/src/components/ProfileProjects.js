@@ -13,10 +13,10 @@ function ProfileProjects(props) {
                         <div className="profile-block-top">
                             <h1>Featured</h1>
                             <Link to="/uploadprojects" className="edit-link">
-                                <i class="fas fa-edit"></i>
+                                <i className="fas fa-edit"/>
                             </Link>
                         </div>
-                        <div className="divider"></div>
+                        <div className="divider"/>
                     </div>
                     <div className="col profile-block profile-socials">
                         <ProfileSocials 
@@ -32,10 +32,10 @@ function ProfileProjects(props) {
                         <div className="profile-block-top">
                             <h1>Projects</h1>
                             <Link to="/editprofile" className="edit-link">
-                                <i class="fas fa-edit"></i>
+                                <i className="fas fa-edit"/>
                             </Link>
                         </div>
-                        <div className="divider"></div>
+                        <div className="divider"/>
                     </div>
                 </div>
             </div>

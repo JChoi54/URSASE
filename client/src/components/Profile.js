@@ -33,9 +33,9 @@ function Profile() {
     return(
         <div className="profile-container">
             <div className="profile-cover">
-                <div class="edit-profile-button">
+                <div className="edit-profile-button">
                     <Link to="/editprofile">
-                        <i class="fas fa-cog"></i>
+                        <i className="fas fa-cog"/>
                         Settings
                     </Link>
                 </div>
@@ -44,14 +44,14 @@ function Profile() {
             <div className="profile-pic">
                 <div className="profile-pic-top">
                     <div className="profile-pic-img">
-                        <img src="images/josh.jpg" alt=""></img>
+                        <img src="images/josh.jpg" alt=""/>
                     </div>
                     <div>
-                        <h1 class="fullname">Joshua Choi</h1>
-                        <h2 class="grad-year">Undergraduate Student • 2022</h2>
+                        <h1 className="fullname">Joshua Choi</h1>
+                        <h2 className="grad-year">Undergraduate Student • 2022</h2>
                     </div>
                 </div>
-                <div className="profile-pic-middle"></div>
+                <div className="profile-pic-middle"/>
                 <div className="profile-pic-bottom">
                     <ul>
                         <li className={info ? 'user-info active' : 'user-info'} onClick={handleInfo}>Personal Info</li>

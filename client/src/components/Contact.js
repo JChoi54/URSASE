@@ -11,18 +11,18 @@ function Contact(){
                 <h1> Contact Us </h1>
                 <form id="contact-form" method="post" action="#">
                     <div className="input-area">
-                        <label for="name"></label>
+                        <label htmlFor="name"/>
                         <input name="name" type="text" className="form-control" id="name" placeholder="Name" required />
                     </div>
 
                     <div className="input-area">
-                        <label for="email"></label>
+                        <label htmlFor="email"/>
                         <input name="email" type="email" className="form-control" id="email" placeholder="Email" required />
                     </div>
 
                     <div className="input-area input-message">
-                        <label for="message"></label>
-                        <textarea name="message" className="form-control" id="message" placeholder="Your Message" required></textarea>
+                        <label htmlFor="message"/>
+                        <textarea name="message" className="form-control" id="message" placeholder="Your Message" required/>
                     </div>
 
                     <div className="send">

@@ -3,8 +3,15 @@ let config = require('../db/config');
 let connection = mysql.createConnection(config.databaseOptions);
 
 connection.connect(function(err) {
-    if (err) throw err;
-    console.log("[Database] Connection Successful.")
+    if (err)
+    {
+        console.log("[Database] Connection failed, check if database server is on.")
+        process.exit(1)
+    }
+    else
+    {
+        console.log("[Database] Connection Successful.")
+    }
 });
 
 const {Sequelize} = require("sequelize");

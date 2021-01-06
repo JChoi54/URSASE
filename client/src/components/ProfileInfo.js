@@ -13,10 +13,10 @@ function ProfileInfo(props) {
                         <div className="profile-block-top">
                             <h1>General Information</h1>
                             <Link to="/editprofile" className="edit-link">
-                                <i class="fas fa-edit"></i>
+                                <i className="fas fa-edit"/>
                             </Link>
                         </div>
-                        <div className="divider"></div>
+                        <div className="divider"/>
                     </div>
                     <div className="col profile-block profile-socials">
                         <ProfileSocials 
@@ -32,10 +32,10 @@ function ProfileInfo(props) {
                         <div className="profile-block-top">
                             <h1>Biography</h1>
                             <Link to="/editprofile" className="edit-link">
-                                <i class="fas fa-edit"></i>
+                                <i className="fas fa-edit"/>
                             </Link>
                         </div>
-                        <div className="divider"></div>
+                        <div className="divider"/>
                     </div>
                 </div>
             </div>

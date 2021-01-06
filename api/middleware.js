@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const config = require('./config');
 
-const withAuth = function(req, res, next) {
+const isAuthenticated = function(req, res, next) {
     const token = req.cookies.token;
     if (!token) {
         res.status(401).send('No token provided');
@@ -16,4 +16,4 @@ const withAuth = function(req, res, next) {
         });
     }
 }
-module.exports = withAuth;
+module.exports = isAuthenticated;

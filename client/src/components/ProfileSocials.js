@@ -6,16 +6,16 @@ function ProfileSocials(props){
     return(
         <div>
             <a href={props.linkedin} target="_blank" rel="noreferrer">
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"/>
             </a>
             <a href={props.facebook} target="_blank" rel="noreferrer">
-                <i class="fab fa-facebook-square"></i>
+                <i className="fab fa-facebook-square"/>
             </a>
             <a href={props.instagram} target="_blank" rel="noreferrer">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"/>
             </a>
             <a href={props.link} target="_blank" rel="noreferrer">
-                <i class="fas fa-link"></i>
+                <i className="fas fa-link"/>
             </a>
         </div>
     )
