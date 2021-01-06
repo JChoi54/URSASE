@@ -111,3 +111,8 @@
     margin-top: 50px;
 }
 
+.upload-projects label,
+.upload-featured label{
+    margin-top: 0;
+}
+
