@@ -133,3 +133,4 @@ fabric.properties
 
 api/db/config.js
 /client/.eslintcache
+/api/config.js
