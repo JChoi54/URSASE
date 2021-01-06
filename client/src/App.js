@@ -53,7 +53,7 @@ class App extends Component {
                     <Navbar authenticated={this.state.authenticated}/>
                     <Switch>
                         <Route path="/" exact component={HomePage}/>
-                        <Route path="/members" exact component={IsAuthenticated(MembersPage)}/>
+                        <Route path="/members" exact component={MembersPage}/>
                         <Route path="/contact" exact component={ContactPage}/>
                         <Route path="/login" exact component={() => <LoginPage logIn={this.logIn}/>}/>
                         <Route path="/logout" exact component={() => <Logout logOut={this.logOut}/>}/>
