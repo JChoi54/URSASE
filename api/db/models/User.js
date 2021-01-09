@@ -31,6 +31,26 @@ let User = db.sequelize.define('user', {
     verifytoken: {
         type: Sequelize.STRING,
         allowNull: true
+    },
+    graduationYear: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    major: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    minor: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    mainstudy: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    biography: {
+        type: Sequelize.TEXT('medium'),
+        allowNull: true
     }
 })
 

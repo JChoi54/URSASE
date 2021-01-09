@@ -1,11 +1,9 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-const mysql = require('mysql2');
 const {QueryTypes} = require("sequelize");
 const db = require('./db/db');
 
@@ -34,6 +32,7 @@ const saltRounds = 10;
 
 // Database Models
 const User = require('./db/models/User')
+const Projects = require('./db/models/Project')
 
 // Cryptography
 const jwt = require("jsonwebtoken");

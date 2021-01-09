@@ -53,7 +53,7 @@
         - Instagram
         - Personal Website
     - Resume Link
-    - Projects
+    - Project
         - Some toggle for featured project
     
 ### APIs

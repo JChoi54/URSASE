@@ -38,12 +38,17 @@ function EditProfile(){
                     <form id="contact-form" method="post" action="#">
                             <h1>Edit Profile</h1>
                             <div className="input-area">
-                                <label for="fullname">Full Name</label>
-                                <input name="fullname" type="text" className="form-control" id="fullname" required />
+                                <label htmlFor="fullName">First Name</label>
+                                <input name="firstName" type="text" className="form-control" id="firstName" required />
+                            </div>
+
+                            <div className="input-area">
+                                <label htmlFor="fullName">Last Name</label>
+                                <input name="lastName" type="text" className="form-control" id="lastName" required />
                             </div>
 
                             <div className="upload-propic">
-                                <label for="profile-pic">Profile Photo</label>
+                                <label htmlFor="profile-pic">Profile Photo</label>
                                 <div>
                                     <input type="file" id="profile-pic" onChange={propicText} hidden="hidden"/>
                                     <button type="button" className="upload-button" onClick={addPropic}>UPLOAD PHOTO</button>
@@ -52,7 +57,7 @@ function EditProfile(){
                             </div>
 
                             <div className="upload-coverpic">
-                                <label for="cover-pic">Cover Photo</label>
+                                <label htmlFor="cover-pic">Cover Photo</label>
                                 <div>
                                     <input type="file" id="cover-pic" onChange={coverpicText} hidden="hidden"/>
                                     <button type="button" className="upload-button" onClick={addCoverpic}>UPLOAD PHOTO</button>
@@ -61,33 +66,33 @@ function EditProfile(){
                             </div>
 
                             <div className="input-area">
-                                <label for="user-email">Email</label>
+                                <label htmlFor="user-email">Email</label>
                                 <input name="user-email" type="email" className="form-control" id="user-email" required />
                             </div>
 
                             <div className="input-area">
-                                <label for="graduation-year">Graduation Year</label>
+                                <label htmlFor="graduation-year">Graduation Year</label>
                                 <input name="graduation-year" type="text" className="form-control" id="graduation-year" required />
                             </div>
 
                             <div className="input-area">
-                                <label for="major">Major(s)</label>
+                                <label htmlFor="major">Major(s)</label>
                                 <input name="major" type="text" className="form-control" id="major" required />
                             </div>
 
                             <div className="input-area">
-                                <label for="minor1">Minor(s)</label>
+                                <label htmlFor="minor1">Minor(s)</label>
                                 <input name="minor" type="text" className="form-control" id="minor" />
                             </div>
 
                             <div className="input-area">
-                                <label for="mainstudy">Main Study</label>
+                                <label htmlFor="mainstudy">Main Study</label>
                                 <input name="mainstudy" type="text" className="form-control" id="mainstudy" required/>
                             </div>
 
                             <div className="input-area input-message">
-                                <label for="bio">Biography</label>
-                                <textarea name="bio" className="form-control" id="bio" required></textarea>
+                                <label htmlFor="bio">Biography</label>
+                                <textarea name="bio" className="form-control" id="bio" required/>
                             </div>
 
                             <div>
