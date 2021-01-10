@@ -69,12 +69,14 @@ app.post('/api/signin', async function (req, res) {
                     if (result) {
                         // STEP 3: Log the user in.
                         // TODO: Create option to check off remember me
+
                         const token = jwt.sign({email}, config.jwt.secret, {
                             expiresIn: '1h'
                         })
 
                         // STEP 4: Sends generated token to front-end.
-                        res.cookie('token', token, { httpOnly: true })//.sendStatus(200);
+                        res.cookie('token', token, { httpOnly: true })
+
                         res.status(200).json({
                             error: 'Redirecting...'
                         })
@@ -107,39 +109,43 @@ app.post('/api/signup', async function (req, res) {
     let email = req.body.email
     let password = req.body.password
 
-    // STEP 1: Check if user already exists on the database.
-    try {
-        db.connection.query("SELECT * FROM users WHERE email=?", [email], async function (err, results) {
-            console.log(results)
+    if (!email.split('@')[1].includes('rochester.edu'))
+    {
+        res.status(400).send("Email must be a University Email.")
+    } else {
+        // STEP 1: Check if user already exists on the database.
+        try {
+            db.sequelize.query("SELECT * FROM users WHERE email=?", {
+                replacements: [email],
+                type: QueryTypes.SELECT,
+                model: User
+            }).then(async function (users) {
+                if (users.length === 0) {
+                    // STEP 2: If user does not already exists, hash password in bcrypt.
+                    const hash = await bcrypt.hash(password, saltRounds);
 
-            if (results.type === undefined && !Array.isArray(results) || Array.isArray(results) && results.length === 0) {
-                // STEP 2: If user does not already exists, hash password in bcrypt.
-                const hash = await bcrypt.hash(password, saltRounds);
+                    // STEP 3: Once hash is completed, create the user model and store the new user into the database.
+                    await User.create({
+                        id: null,
+                        email: req.body.email,
+                        password: hash,
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        verified: true, // TODO: Make it so user is not automatically verified.
+                        verifyToken: null // TODO: Instead of making it a link verify token, make it a code and ask user to activate through a page.
+                    })
 
-                // STEP 3: Once hash is completed, create the user model and store the new user into the database.
-                await User.create({
-                    id: null,
-                    email: req.body.email,
-                    password: hash,
-                    firstName: req.body.firstName,
-                    lastName: req.body.lastName,
-                    verified: true, // TODO: Make it so user is not automatically verified.
-                    verifyToken: null // TODO: Instead of making it a link verify token, make it a code and ask user to activate through a page.
-                })
+                    // TODO: Add email verification step. Generate email verification token and add it to Step 3.
 
-                // TODO: Add email verification step. Generate email verification token and add it to Step 3.
+                    // STEP 4: Send response back to react letting them know to verify their email.
 
-                // STEP 4: Send response back to react letting them know to verify their email.
-
-                // STEP 4b: Send email to user with verification email letting them know they need to verify.
-
-                res.send("Successfully created user.")
-            } else {
-                res.send("Email already in-use.")
-            }
-        })
-    } catch (e) {
-        console.error("/api/signup: " + e.message)
+                    // STEP 4b: Send email to user with verification email letting them know they need to verify.
+                    res.status(201).send("Successfully created user.")
+                }
+            })
+        } catch (e) {
+            console.error("/api/signup: " + e.message)
+        }
     }
 })
 

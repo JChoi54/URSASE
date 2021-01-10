@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/JChoi54/URSASE/issues"
   },
-  "homepage": "https://github.com/JChoi54/URSASE#readme"
+  "homepage": "https://github.com/JChoi54/URSASE#readme",
+  "dependencies": {}
 }
