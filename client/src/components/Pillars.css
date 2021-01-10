@@ -46,3 +46,24 @@
     height: 100px;
 }
 
+@media (max-width: 570px){
+    .pillars h1{
+        font-size: 32px;
+    }
+
+    .pillars .pillar_icons h2 {
+        font-size: 16px;
+    }
+
+    .pillars .pillar_icons{
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pillars p{
+        margin-left: 50px;
+        margin-right: 50px;
+
+    }
+}

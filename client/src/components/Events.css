@@ -17,3 +17,13 @@
     font-size: 24px;
     font-weight: 300;
 }
+
+@media (max-width: 570px){
+    .events-main h1{
+        font-size: 30px;
+    }
+
+    .events-main h2{
+        font-size: 22px;
+    }
+}

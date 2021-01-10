@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ProfileCard from './ProfileCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Eboard() {
     return(
@@ -14,11 +15,11 @@ function Eboard() {
                 <h1>The Executive Board</h1>
             </div>
             <div className="eboard_members">
-                <Container>
+                <div className="container">
                     <h1>Our Current Chapter Leadership</h1>
                     <h2 className="eboard-years">2020-2021</h2>
-                    <Row>
-                        <Col>
+                    <div className="row">
+                        <div className="col-md">
                             <ProfileCard
                             src="images/arnav.jpg"
                             position="President"
@@ -31,8 +32,8 @@ function Eboard() {
                             tech, sciences, and diversity & inclusion; my interest areas include 
                             human-computer interactions, geospatial technology, and scientific communications."
                             /> 
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/jonathan.jpg"
                             position="Vice President"
@@ -44,8 +45,8 @@ function Eboard() {
                             link="http://jonathan-lai.digitalscholar.rochester.edu/?fbclid=IwAR0qryJgCTyGgUySaWCsYOGvwLLfCRZrZaLtqBxmHIrpNHm_zj2eBZs6AmM"
                             info="I'm currently a Junior at the University of Rochester pursuing a degree in Computer Science. I enjoy doing research and solving problems related to data science."
                             />  
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/justin.jpg"
                             position="Secretary"
@@ -57,11 +58,11 @@ function Eboard() {
                             info="Hello! My name is Justin. I love playing tennis, piano, and games. 
                             Hope to get to know you all!"
                             />  
-                        </Col>
-                    </Row>
+                        </div>
+                    </div>
 
-                    <Row>
-                        <Col>
+                    <div className="row">
+                        <div className="col-md">
                             <ProfileCard
                             src="images/christopher.jpg"
                             position="Business Manager"
@@ -75,8 +76,8 @@ function Eboard() {
                             I work towards my goal of becoming a biomedical engineer while also building connections, 
                             making an influence, and creating positive change! Feel free to reach out to me with anything!"
                             />  
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/josh.jpg"
                             position="Publicity Chair"
@@ -89,30 +90,30 @@ function Eboard() {
                             info="Hey, my name is Joshua Choi and I’m passionate about web design and front-end 
                             web development. In my free time, I enjoy photography, music, and petting my dog."
                             />  
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/default.jpg"
                             position="Fundraising Chair"
                             name="David Wang"
-                            major="placeholder"
+                            major="Computer Science"
                             year="2022"
                         
                             />  
-                        </Col>
-                    </Row>
+                        </div>
+                    </div>
 
-                    <Row>
-                        <Col>
+                    <div className="row">
+                        <div className="col-md">
                             <ProfileCard
                             src="images/default.jpg"
                             position="Event Coordinator"
                             name="Derek Guo"
-                            major="placeholder"
+                            major="Epidemiology"
                             year="2022"
                             />  
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/katie.jpg"
                             position="Community Outreach Chair"
@@ -126,8 +127,8 @@ function Eboard() {
                             community outreach programs. I am especially passionate about getting more women and 
                             minorities in STEM!"
                             />  
-                        </Col>
-                        <Col>
+                        </div>
+                        <div className="col-md">
                             <ProfileCard
                             src="images/neya.jpg"
                             position="Mentorship Chair"
@@ -141,9 +142,9 @@ function Eboard() {
                             n Neuroscience. I am very excited to help students find a supportive 
                             mentor in the SASE community."
                             />  
-                        </Col>
-                    </Row>
-                </Container>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -34,3 +34,17 @@
     font-size: 25px;
     margin-bottom: 200px;
 }
+
+@media (max-width: 570px){
+    .eboard_header h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .eboard_members h1{
+        font-size: 30px;
+    }
+
+    .eboard_members .eboard-years{
+        font-size: 22px;
+    }
+}

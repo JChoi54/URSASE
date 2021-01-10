@@ -51,8 +51,9 @@ class SignInSignUp extends Component {
                         <div className="option left-option">
                             <div className="option-content">
                                 <h3>New Here?</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>As a member of UR SASE, you have access to a valuable support network, 
+                                    as well as several opportunities to grow yourself as a leader and 
+                                    budding professional.</p>
                                 <button className="click-button transparent" id="signup-button"
                                         onClick={this.signupMode}>Sign Up
                                 </button>
@@ -62,8 +63,8 @@ class SignInSignUp extends Component {
                         <div className="option right-option">
                             <div className="option-content">
                                 <h3>Already a member?</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>As a member of UR SASE, your #SASEfam will always be there for you. Log in to 
+                                    connect with the other members of SASE!</p> 
                                 <button className="click-button transparent" id="signin-button"
                                         onClick={this.signinMode}>Log In
                                 </button>
