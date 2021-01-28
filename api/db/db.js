@@ -1,10 +1,10 @@
-let config = require('../db/config');
+let config = require('../config');
 
 const {Sequelize} = require("sequelize");
 
-let sequelize = new Sequelize(config.databaseOptions.database, config.databaseOptions.user, config.databaseOptions.password, {
-    host: config.databaseOptions.host,
-    port: config.databaseOptions.port,
+let sequelize = new Sequelize(config.application.databaseOptions.database, config.application.databaseOptions.user, config.application.databaseOptions.password, {
+    host: config.application.databaseOptions.host,
+    port: config.application.databaseOptions.port,
     dialect: 'mysql',
 
     pool: {
@@ -14,4 +14,4 @@ let sequelize = new Sequelize(config.databaseOptions.database, config.databaseOp
     },
 });
 
-module.exports = { sequelize };
+module.exports = {sequelize};
