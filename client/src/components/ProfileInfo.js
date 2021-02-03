@@ -18,14 +18,14 @@ function ProfileInfo(props) {
                         </div>
                         <div className="divider"/>
                     </div>
-                    <div className="col profile-block profile-socials">
+                    {props.linkedIn === null && props.facebook === null && props.instagram === null && props.link === null ? null : <div className="col profile-block profile-socials">
                         <ProfileSocials 
-                            linkedin="https://www.linkedin.com/in/joshuachoi54/"
-                            facebook="https://www.facebook.com/profile.php?id=100009332918146" 
-                            instagram="https://www.instagram.com/choi._.create/?hl=en"
-                            link="https://joshua-choi.com/"
+                            linkedin={props.linkedIn}
+                            facebook={props.facebook}
+                            instagram={props.instagram}
+                            link={props.link}
                         />
-                    </div>
+                    </div>}
                 </div>
                 <div className="row">
                     <div className="col-8 profile-block">
@@ -36,6 +36,9 @@ function ProfileInfo(props) {
                             </Link>
                         </div>
                         <div className="divider"/>
+                        <div>
+                            <p>{props.biography}</p>
+                        </div>
                     </div>
                 </div>
             </div>

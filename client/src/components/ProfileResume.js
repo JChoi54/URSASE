@@ -18,14 +18,14 @@ function ProfileResume(props) {
                         </div>
                         <div className="divider"/>
                     </div>
-                    <div className="col profile-block profile-socials">
-                        <ProfileSocials 
-                            email="" 
-                            linkedin="https://www.linkedin.com/in/joshuachoi54/"
-                            instagram="https://www.instagram.com/choi._.create/?hl=en"
-                            link="https://joshua-choi.com/"
+                    {props.linkedIn === null && props.facebook === null && props.instagram === null && props.link === null ? null : <div className="col profile-block profile-socials">
+                        <ProfileSocials
+                            linkedin={props.linkedIn}
+                            facebook={props.facebook}
+                            instagram={props.instagram}
+                            link={props.link}
                         />
-                    </div>
+                    </div>}
                 </div>
             </div>
         </div>

@@ -38,13 +38,13 @@ class Navbar extends Component {
                     </li>
 
                     {this.props.authenticated ?
-                    <li>
-                        <NavLink exact to="/members" className="nav-links" activeClassName="nav-links-active"
-                                 onClick={this.closeMobileMenu}>
-                            Members
-                        </NavLink>
-                    </li> 
-                    : null}
+                        <li>
+                            <NavLink exact to="/members" className="nav-links" activeClassName="nav-links-active"
+                                     onClick={this.closeMobileMenu}>
+                                Members
+                            </NavLink>
+                        </li>
+                        : null}
 
                     <li>
                         <NavLink exact to="/contact" className="nav-links" activeClassName="nav-links-active"

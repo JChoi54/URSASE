@@ -2,14 +2,14 @@ const jwt = require('jsonwebtoken');
 const config = require('./config');
 const User = require('./db/models/User')
 
-const isAuthenticated = function (req, res, next) {
+const isAuthenticated = async function (req, res, next) {
     const token = req.cookies.token;
     if (!token) {
-        res.status(401).send('No token provided');
+        res.sendStatus(401)
     } else {
         jwt.verify(token, config.jwt.secret, async function (err, decoded) {
             if (err) {
-                res.status(401).send('Invalid token');
+                res.sendStatus(401)
             } else {
                 req.email = decoded.email;
                 const user = await User.findOne({where: {email: req.email}})
@@ -17,7 +17,7 @@ const isAuthenticated = function (req, res, next) {
                 if (user !== null) {
                     next()
                 } else {
-                    res.status(401).send('User does not exist')
+                    res.sendStatus(401)
                 }
             }
         });

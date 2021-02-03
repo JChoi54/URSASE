@@ -6,7 +6,6 @@
 .profile-cover{
     height: 320px;
     margin-top: 80px;
-    background-image: url("https://images.unsplash.com/photo-1470219556762-1771e7f9427d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80");
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;

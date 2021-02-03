@@ -49,7 +49,32 @@ let User = db.sequelize.define('user', {
         allowNull: true
     },
     biography: {
-        type: Sequelize.TEXT('medium'),
+        type: Sequelize.TEXT,
+        allowNull: true
+    },
+    profilePicture: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        default: "default.jpg"
+    },
+    coverImage: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    linkedInURL: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    facebookURL: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    instagramURL: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    websiteURL: {
+        type: Sequelize.STRING,
         allowNull: true
     }
 })
@@ -59,6 +84,13 @@ User.prototype.isCorrectPassword = function (password, callback) {
         if (err) return callback(err, false);
         return callback(err, result)
     });
+}
+
+User.prototype.toJSON = function () {
+    var values = Object.assign({}, this.get());
+
+    delete values.password;
+    return values;
 }
 
 module.exports = User
