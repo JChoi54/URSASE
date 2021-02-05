@@ -6,9 +6,9 @@ import Alumni from './Alumni';
 
 function Members() {
 
-    const[all, setAll] = useState(true);
-    const[alumni, setAlumni] = useState(false);
-    const[undergraduate, setUndergraduate] = useState(false);
+    const [all, setAll] = useState(true);
+    const [alumni, setAlumni] = useState(false);
+    const [undergraduate, setUndergraduate] = useState(false);
 
     const handleAll = () => {
         setAll(true);
@@ -33,11 +33,14 @@ function Members() {
             <div id="members-top" className="members-cover">
                 <h1>Meet the members of SASE and connect with them</h1>
             </div>
-            <div className ="members-filter">
+            <div className="members-filter">
                 <ul>
                     <li className={all ? 'members-all active' : 'members-all'} onClick={handleAll}>All Members</li>
-                    <li className={undergraduate ? 'members-undergraduates active' : 'members-undergraduates'} onClick={handleUndergraduates}>Undergraduates</li>
-                    <li className={alumni ? 'members-alumni active' : 'members-alumni'} onClick={handleAlumni}>Alumni</li>
+                    <li className={undergraduate ? 'members-undergraduates active' : 'members-undergraduates'}
+                        onClick={handleUndergraduates}>Undergraduates
+                    </li>
+                    <li className={alumni ? 'members-alumni active' : 'members-alumni'} onClick={handleAlumni}>Alumni
+                    </li>
                 </ul>
             </div>
 

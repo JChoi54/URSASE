@@ -36,6 +36,11 @@ let User = db.sequelize.define('user', {
         type: Sequelize.INTEGER,
         allowNull: true
     },
+    isAlumni: {
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+        default: false
+    },
     major: {
         type: Sequelize.STRING,
         allowNull: true
@@ -55,7 +60,7 @@ let User = db.sequelize.define('user', {
     profilePicture: {
         type: Sequelize.STRING,
         allowNull: true,
-        default: "default.jpg"
+        default: "images/default.jpg"
     },
     coverImage: {
         type: Sequelize.STRING,
@@ -84,6 +89,13 @@ User.prototype.isCorrectPassword = function (password, callback) {
         if (err) return callback(err, false);
         return callback(err, result)
     });
+}
+
+User.prototype.isCompleteProfile = function () {
+    if (this.graduationYear !== null && this.major !== null && this.mainstudy !== null) {
+        return true // TODO: Add more verification checks to see if the profile is complete.
+    }
+    return false
 }
 
 User.prototype.toJSON = function () {

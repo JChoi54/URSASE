@@ -9,7 +9,7 @@ function MemberCard(props){
                 <img src={props.src} alt=""/>
             </div>
             <div className="member-card-title">
-                <h1>{props.fullname}</h1>
+                <h1>{props.fullName}</h1>
                 <h2>{props.email}</h2>
                 <h2>{props.year}</h2>
             

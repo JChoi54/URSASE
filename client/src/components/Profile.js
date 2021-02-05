@@ -43,7 +43,7 @@ function Profile() {
         let query = queryString.parse(location.search);
 
         if (query.id) {
-            fetch("/api/profile?id=").then(async res => {
+            fetch("/api/profile?id=" + query.id).then(async res => {
                 let json = await res.json()
                 user = json.user
 
@@ -58,7 +58,6 @@ function Profile() {
             fetch("/api/profile").then(async res => {
                 let json = await res.json()
                 user = json.user
-                console.log(user)
 
                 setState(state => ({
                     ...state,
@@ -84,7 +83,7 @@ function Profile() {
             <div className="profile-pic">
                 <div className="profile-pic-top">
                     <div className="profile-pic-img">
-                        <img src={"images/" + state.user.profilePicture} alt=""/>
+                        <img src={state.user.profilePicture} alt=""/>
                     </div>
                     <div>
                         <h1 className="fullname">{state.user.firstName} {state.user.lastName}</h1>

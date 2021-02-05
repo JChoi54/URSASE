@@ -1,24 +1,46 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Members.css';
 import '../App.css';
 import MemberCard from './MemberCard';
 
 function Undergraduates(props) {
+    const [state, setState] = useState({
+        loading: true,
+        undergraduates: []
+    });
+
+    useEffect(() => {
+        fetch('/api/undergraduates').then(async res => {
+            let json = await res.json()
+            let undergraduates = []
+
+            for (let i = 0; i < json.undergraduates.length; i++){
+                let undergraduate = json.undergraduates[i]
+
+                undergraduates.push(<MemberCard
+                    key={i}
+                    src={undergraduate.profilePicture}
+                    fullName={undergraduate.firstName + " " + undergraduate.lastName}
+                    year={undergraduate.graduationYear}
+                    email={undergraduate.email}
+                    major={undergraduate.major}
+                    study={undergraduate.mainstudy}
+                    link={"/profile?id=" + undergraduate.id}
+                />)
+            }
+
+            setState(state => ({
+                ...state,
+                loading: false,
+                undergraduates: undergraduates
+            }))
+        })
+    }, [])
+
     return(
         <div className={props.alumni ? "hide": "undergraduates-container"}>
-            <h1>Undergraduates</h1>
-            <MemberCard 
-                src="images/josh.jpg"
-                fullname="Joshua Choi"
-                year="2022"
-                email="jchoi84@u.rochester.edu"
-                major="Computer Science and Digital Media Studies"
-                study="Web Development"
-                link="profile"
-            />
-            <MemberCard />
-            <MemberCard />
-
+            {state.undergraduates.length > 0 ? <h1>Undergraduates</h1> : null }
+            {state.undergraduates}
         </div>
     )
 }
