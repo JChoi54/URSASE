@@ -55,6 +55,7 @@ function Profile() {
                 }))
             })
         } else {
+            // TODO: If its your profile enable edit button, otherwise disable them.
             fetch("/api/profile").then(async res => {
                 let json = await res.json()
                 user = json.user

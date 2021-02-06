@@ -2,13 +2,13 @@
 ### By Joshua Choi and Desmond Lai
 
 ### Known Issues
-- Find a replacement for the Google Map package as it contains legacy code causing many warnings.
 - Fix memory leak on Profile.js and potentially other pages due to middleware IsAuthenticated.js
 - Background image for Members.js is clipped off on bigger screens. (2560x1440)
 
 ## Frontend Tasks
 
 Create Email Verification Page
+- Wait until we have an email server for this.
 
 Implement embedded Google Drive Links for Resumes.
 
@@ -24,8 +24,8 @@ Fetch information for Members.js
   - For cover images, may (or may not) need to use external uploader as it is a CSS background-image.
     - https://stackoverflow.com/questions/57111197/react-path-to-public-folder-in-css-background-image
 - Create POST request for Change Password.
-- Create POST request for Contact Us Page.
-- Send email verification using nodemailer.
+- Email Verification Page + Send Email for Contact Us Page
+  - Wait until we have an email server before doing this.
     
 ### APIs
 - Create an API request to CCC (CampusGroups) to pull events to the homepage from the SASE event page.
