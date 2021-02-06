@@ -214,6 +214,14 @@ form.signup-form{
     opacity: 1;
 }
 
+.input-checkbox {
+    margin: 10px;
+}
+
+.input-checkbox input {
+    margin-right: 10px;
+}
+
 
 @media (max-width: 870px){
     .login-container{

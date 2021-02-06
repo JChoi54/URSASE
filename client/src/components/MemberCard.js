@@ -6,7 +6,7 @@ function MemberCard(props){
     return(
         <div className="member-card">
             <div className="member-card-img">
-                <img src={props.src} alt=""/>
+                <img src={props.src === null ? "images/default.jpg" : props.src} alt=""/>
             </div>
             <div className="member-card-title">
                 <h1>{props.fullName}</h1>

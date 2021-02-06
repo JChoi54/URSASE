@@ -12,9 +12,9 @@ function ProfileInfo(props) {
                     <div className="col-8 profile-block">
                         <div className="profile-block-top">
                             <h1>General Information</h1>
-                            <Link to="/editprofile" className="edit-link">
+                            {props.isMe ? <Link to="/editprofile" className="edit-link">
                                 <i className="fas fa-edit"/>
-                            </Link>
+                            </Link> : null }
                         </div>
                         <div className="divider"/>
                     </div>
@@ -31,9 +31,9 @@ function ProfileInfo(props) {
                     <div className="col-8 profile-block">
                         <div className="profile-block-top">
                             <h1>Biography</h1>
-                            <Link to="/editprofile" className="edit-link">
+                            {props.isMe ? <Link to="/editprofile" className="edit-link">
                                 <i className="fas fa-edit"/>
-                            </Link>
+                            </Link> : null }
                         </div>
                         <div className="divider"/>
                         <div>

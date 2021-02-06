@@ -9,6 +9,7 @@ class SignUp extends Component {
         confirmPassword: '',
         firstName: '',
         lastName: '',
+        isAlumni: false,
         postResponse: '',
     }
 
@@ -66,6 +67,10 @@ class SignUp extends Component {
                     <i className="fas fa-lock"/>
                     <input type="password" placeholder="Confirm Password" value={this.state.confirmPassword}
                            onChange={e => this.setState({confirmPassword: e.target.value})}/>
+                </div>
+                <div className="input-checkbox">
+                    <input name="isAlumniBox" type="checkbox" value={this.state.isAlumni} onChange={e => this.setState({isAlumni: e.target.value})}/>
+                    <label htmlFor="isAlumniBox">Are you an Alumni?</label>
                 </div>
                 <input type="submit" value="Sign Up" className="click-button"/>
                 <p>{this.state.postResponse}</p>

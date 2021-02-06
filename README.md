@@ -26,6 +26,7 @@ Fetch information for Members.js
 - Create POST request for Change Password.
 - Email Verification Page + Send Email for Contact Us Page
   - Wait until we have an email server before doing this.
-    
+- Instead of sending 401 requests when not logged in, send a json response.
+
 ### APIs
 - Create an API request to CCC (CampusGroups) to pull events to the homepage from the SASE event page.

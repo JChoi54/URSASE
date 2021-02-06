@@ -35,7 +35,8 @@ function Profile() {
     const [state, setState] = useState({
         loading: true,
         coverImage: "https://images.unsplash.com/photo-1470219556762-1771e7f9427d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80",
-        user: []
+        user: [],
+        isMe: false
     });
 
     useEffect(() => {
@@ -51,11 +52,11 @@ function Profile() {
                     ...state,
                     loading: false,
                     coverImage: user.coverImage === null ? state.coverImage : user.coverImage,
-                    user: user
+                    user: user,
+                    isMe: json.isMe
                 }))
             })
         } else {
-            // TODO: If its your profile enable edit button, otherwise disable them.
             fetch("/api/profile").then(async res => {
                 let json = await res.json()
                 user = json.user
@@ -64,7 +65,8 @@ function Profile() {
                     ...state,
                     loading: false,
                     coverImage: user.coverImage === null ? state.coverImage : user.coverImage,
-                    user: user
+                    user: user,
+                    isMe: json.isMe
                 }))
             })
         }
@@ -73,18 +75,18 @@ function Profile() {
     return state.loading ? null : (
         <div className="profile-container">
             <div className="profile-cover" style={{backgroundImage: "url(" + (state.coverImage) + ")"}}>
-                <div className="edit-profile-button">
+                {state.isMe ? <div className="edit-profile-button">
                     <Link to="/editprofile">
                         <i className="fas fa-cog"/>
                         Settings
                     </Link>
-                </div>
+                </div> : null}
             </div>
 
             <div className="profile-pic">
                 <div className="profile-pic-top">
                     <div className="profile-pic-img">
-                        <img src={state.user.profilePicture} alt=""/>
+                        <img src={state.user.profilePicture === null ? "images/default.jpg" : state.user.profilePicture} alt=""/>
                     </div>
                     <div>
                         <h1 className="fullname">{state.user.firstName} {state.user.lastName}</h1>
@@ -105,11 +107,11 @@ function Profile() {
             <div className="profile-content">
                 <ProfileInfo info={info} biography={state.user.biography} linkedIn={state.user.linkedInURL}
                              facebook={state.user.facebookURL} instagram={state.user.instagramURL}
-                             link={state.user.websiteURL}/>
+                             link={state.user.websiteURL} isMe={state.isMe}/>
                 <ProfileResume resume={resume} linkedIn={state.user.linkedInURL} facebook={state.user.facebookURL}
-                               instagram={state.user.instagramURL} link={state.user.websiteURL}/>
+                               instagram={state.user.instagramURL} link={state.user.websiteURL} isMe={state.isMe}/>
                 <ProfileProjects projects={projects} linkedIn={state.user.linkedInURL} facebook={state.user.facebookURL}
-                                 instagram={state.user.instagramURL} link={state.user.websiteURL}/>
+                                 instagram={state.user.instagramURL} link={state.user.websiteURL} isMe={state.isMe}/>
             </div>
         </div>
     )

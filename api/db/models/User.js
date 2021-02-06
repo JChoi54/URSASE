@@ -38,7 +38,7 @@ let User = db.sequelize.define('user', {
     },
     isAlumni: {
         type: Sequelize.BOOLEAN,
-        allowNull: true,
+        allowNull: false,
         default: false
     },
     major: {
@@ -59,8 +59,7 @@ let User = db.sequelize.define('user', {
     },
     profilePicture: {
         type: Sequelize.STRING,
-        allowNull: true,
-        default: "images/default.jpg"
+        allowNull: true
     },
     coverImage: {
         type: Sequelize.STRING,
